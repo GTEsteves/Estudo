@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro x Estrangeiro</title>
+</head>
+<body>
+    <h1>De qual país você é?</h1>
+    <input type="text" name="txtin" id="txtin">
+    <input type="button" value="Ok" onclick="start()">
+    <div class="resp"> </div>
+
+    <script>
+    function start() {
+
+        var txti = window.document.querySelector('#txtin') //Busca tudo com a id selecionada.
+        var res = document.querySelector('.resp') //Busca tudo com a classe selecionada.
+
+        if (txti.value == 'Brasil') { //É importante pedir o valor, já que o querySelector está pegando o objeto e não, exclusivamente, o conteúdo!
+            res.innerHTML = "Você é brasileiro!"
+        } else {
+            res.innerHTML = "Você é estrangeiro!"
+        }}
+    </script>
+</body>
+</html>
